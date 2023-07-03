@@ -5,6 +5,8 @@ import Portfolio from "../components/Portfolio/Portfolio"
 import "./Home.css"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Footer from "../components/Footer/Footer"
+import Tools from '../components/Card/Tools'
 
 const Home = () => {
 
@@ -95,6 +97,9 @@ const Home = () => {
         <div ref={aboutRef}>
           <About />
         </div>
+        <div>
+          <Tools/>
+        </div>
         <div ref={portfolioRef}>
           <Portfolio />
         </div>
@@ -103,7 +108,7 @@ const Home = () => {
         </div>
         </div>
 
-    
+        <Footer/>
     </div>
   )
 }
