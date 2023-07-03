@@ -73,7 +73,7 @@ const Home = () => {
           </h2> 
                                
       <div class="btnHcontainer">
-        <a class="btn">
+        <a class="btn" href='https://www.youtube.com/watch?v=h6CH3DG5trU&list=RDMM&index=10&ab_channel=CharlyGarcia-Topic'>
        <svg width="277" height="62"> 
         <defs>
         <linearGradient id="grad1">
@@ -87,12 +87,7 @@ const Home = () => {
     </a>
     </div>
 
-        
-          </div>
-                     
-
-
-
+        </div>
         </div>
         <div ref={aboutRef}>
           <About />
