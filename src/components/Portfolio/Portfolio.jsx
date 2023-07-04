@@ -1,6 +1,9 @@
 import React from 'react'
 import "./Portfolio.css"
 import WorkCard from "../../components/Card/WorkCard"
+import gea from "../../Imgs/gea.png"
+import dogs from "../../Imgs/dogs.png"
+import foodland from"../../Imgs/foodland.png"
 
 const Portfolio = () => {
 
@@ -8,22 +11,27 @@ const Portfolio = () => {
 
 const workCards = [
   {
-    name:"Trabajo1",
+    name:"Gea: Energy Store",
     category:"Frontend",
-    img:"https://thumbs.dreamstime.com/b/lupa-y-una-nota-con-la-palabra-ejemplos-ejemplo-de-concepto-marketing-empresarial-formaci%C3%B3n-paro-plano-222957926.jpg",
-    description:"lorem lorem diiqodjwozmwsuwqpamdie3bwdxoamqbdu3bwofn3eu"
+    img:gea,
+    description:"Simple E-commerce for small shop, with independently managed firebase account ",
+    link:"https://chic-toffee-93510a.netlify.app",
+    skills:"React, MaterialUI, Firebase , Netifly"
   },
   {
-    name:"Trabajo2",
-    category:"Frontend",
-    img:"https://thumbs.dreamstime.com/b/lupa-y-una-nota-con-la-palabra-ejemplos-ejemplo-de-concepto-marketing-empresarial-formaci%C3%B3n-paro-plano-222957926.jpg",
-    description:"lorem lorem diiqodjwozmwsuwqpamdie3bwdxoamqbdu3bwofn3eu"
+    name:"API DOGS",
+    category:"Full Stack",
+    img:dogs,
+    description:"Full stack application that allows users to search for dog races and view their information, they can also create their own races",
+    link:"pi-dogs-front-ruby.vercel.app",
+    skills:"React, Node.js , Express, postgreSQL, Redux, Vercel"
   },
   {
-    name:"Trabajo1",
-    category:"Frontend",
-    img:"",
-    description:"lorem lorem diiqodjwozmwsuwqpamdie3bwdxoamqbdu3bwofn3eu"
+    name:"FOODLAND",
+    category:"Full Stack",
+    img:foodland,
+    description:"This application is an ecommerce where users can register, add products reviews , pay with paypal, recibe Email notifications .Also it has an administration panel to create and modifie all products, delete users, watch statistics.. "
+    ,skills:"React, Node.js, Express, MongoDB, Redux"
   }
 ]
 
@@ -31,11 +39,8 @@ const workCards = [
       <div className='portfolio'>
 
           <div className='portText'>
-              <div className='sectionTitle'>
-                  PORTFOLIO
-              </div>
                 <h1>My latest work</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus sint beatae. Ipsam nisi quod delectus pariatur laboriosam ratione, inventore at veniam suscipit, sunt non, voluptas nulla error perspiciatis ad.</p>
+                <p>These are the projects I made from scratch, Below, you can see images of other freelance jobs that will be deployed soon</p>
           </div>
 
           <div className='filters'>
@@ -52,6 +57,8 @@ const workCards = [
           category={e.category}
           img={e.img}
           description={e.description}
+          link={e.link}
+          skills={e.skills}
           />
         )
        })}

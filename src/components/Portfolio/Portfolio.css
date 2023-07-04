@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-image: url("../../Imgs/gato.jpg");
     color: white;
+    background-attachment: fixed;
 }
 
 .sectionTitle {
@@ -14,13 +15,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 4%;
 }
 .portText h1{
     font-size: 40px;
 }
 .portText p {
-    width: 60%;
-    font-size: 18px;
+    width: 100%;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.774);
     margin-top: 0;
     margin-bottom: 3%;
 }
@@ -29,7 +33,25 @@
     width: 40%;
     display: flex;
     justify-content: space-evenly;
+}
 
+.filters button{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 22px;
+    padding: 1%;
+    width: 20%;
+    background-color:transparent;
+    color: #a74bfd;
+    border: 2px solid #a74bfd;
+    border-radius: 25px;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+.filters button:hover {
+    color: #a74bfd;
+    border: 2px solid #a74bfd;
+    box-shadow:#9320ff 0px 2px 30px 0px;
 }
 
 .cards {
@@ -58,18 +80,13 @@
 
 .portText h1 {
     font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 50px;
 }
 
 .portText p {
     font-family: 'News Cycle', sans-serif;
 }
 
-.filters button{
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 22px;
-    padding: 1%;
-    width: 20%;
-}
 
 /* WORKCARD */
 
@@ -80,7 +97,10 @@
     justify-content: space-between;
     
 }
-
+.workCard a {
+    color:#a74bfd; 
+    margin-left: 1%;
+}
 .workCard h5 {
     margin-bottom: 0%;
     font-family: 'Pathway Gothic One', sans-serif;
@@ -94,13 +114,14 @@
 }
 .workCard img {
 width: 100%;
+
 }
 
 .workCard p {
     width: 100%;
     font-size: 18px;
     font-family: 'News Cycle', sans-serif;
-    text-align: center;
+    
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;

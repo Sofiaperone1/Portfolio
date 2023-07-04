@@ -12,12 +12,21 @@
     padding-bottom: 1%;
 }
 
+.contact {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding-top: 4%;
+   
+}
 .contact h1{
+    font-size: 50px;
     font-family: 'Pathway Gothic One', sans-serif;
+
 }
 .contact p {
     font-family: 'News Cycle', sans-serif;
     font-size: 20px;
+    color: rgba(255, 255, 255, 0.664);
 }
 
 .cc {
@@ -38,12 +47,10 @@
     margin-top: 3vh;
 
 }
-.question .img {
-    height: 50px;
-    width: 50px;
-    background-color: orange;
+.question svg {
+    color: #d44bfd;
+    margin-top: 0.5%;
 }
-
 .question div {
    
     display: flex;
@@ -62,57 +69,116 @@
     font-size: 25px;
     font-family: 'Pathway Gothic One', sans-serif;
     margin-bottom: 1%;
+    color: rgba(255, 255, 255, 0.747);
 }
 
 .question p {
     font-family: 'News Cycle', sans-serif;
     margin-bottom: 1%;
     font-size: 18px;
+  
 }
 
+.question p span{
+    color:#d44bfd
+}
 
 /* CONTACT FORM */
 
 .form {
-    
     width: 60%;
 }
 
-.form form {
-    
+.form form {   
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
     margin-left: 4%;
-    
 }
 
-.form form .email, .form form .subject {
+.form form .email, .form form .subject , .form form .name{
     width: 100%; margin-top: 3%;
 }
 
 .subject fieldset {
     height: 200%;
+    border:transparent;
+    background-color:#1c1d24;
 }
 
-.form form .names {
-  
-    display: flex;
-    justify-content:space-between;
-    margin-top: 3vh;
-    width: 100%;
-}
-.form form .names fieldset {
-    width: 100%;
-    width: 196%;
-}
+
 .form form .btnHcontainer {
-    margin-top: 10%;
+    margin-top: 13%;
+    margin-bottom: 14%;
 }
 
-.form form .names div {
-    
-    width: 48%;
+.form label {
+    color: rgba(255, 255, 255, 0.664);
 }
+.form input {
+    border:transparent;
+    background-color:#1c1d24;
+    border-radius: 3px;
+}
+
+
+/* BOTON BANNER */
+
+
+.form .btnHcontainer{
+    margin-top: 2%;
+}
+.form .btnHcontainer .btn {
+    border: transparent;
+      position: relative;
+      display: inline-block;
+      width: 277px;
+      height: 50px;
+      line-height: 60px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: transparent;
+      cursor: pointer;
+      text-decoration:none;
+      font-family: 'Pathway Gothic One', sans-serif;
+      font-weight:700;
+      font-size:20px;
+      letter-spacing: 0.045em;
+  }
+  
+  .form .btnHcontainer .btn svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+  }
+  
+  .form .btnHcontainer .btn svg rect {
+      stroke-width: 4;
+      stroke-dasharray: 353, 0;
+      stroke-dashoffset: 0;
+      -webkit-transition: all 600ms ease;
+      transition: all 600ms ease;
+      
+  }
+  
+  .form .btnHcontainer .btn span{
+
+        background: #b16ce6;
+        background: -moz-linear-gradient(left,  #66269b 0%, #b16ce6 100%);
+        background: -webkit-linear-gradient(left,  #66269b 0%,#b16ce6 100%);
+        background: linear-gradient(to right,  #66269b 0%,#b16ce6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       
+      }
+
+  
+  .form .btnHcontainer .btn:hover svg rect {
+      stroke-width: 4;
+      stroke-dasharray: 196, 543;
+      stroke-dashoffset: 437;
+    
+  }
