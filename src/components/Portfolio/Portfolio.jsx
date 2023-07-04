@@ -39,11 +39,8 @@ const workCards = [
       <div className='portfolio'>
 
           <div className='portText'>
-              <div className='sectionTitle'>
-                  PORTFOLIO
-              </div>
                 <h1>My latest work</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus sint beatae. Ipsam nisi quod delectus pariatur laboriosam ratione, inventore at veniam suscipit, sunt non, voluptas nulla error perspiciatis ad.</p>
+                <p>These are the projects I made from scratch, Below, you can see images of other freelance jobs that will be deployed soon</p>
           </div>
 
           <div className='filters'>

@@ -6,15 +6,19 @@ const About = () => {
   return (
     <div className='about'>
 
-      <div className='sectionTitle'> ABOUT </div>
-
         <div className='card'>
            <img src={cv1} alt="cv" />
 
            <div className='text'>
             <h1>Sofia Perone</h1> 
             <h3>Fullstack developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid laborum repellendus doloribus distinctio sequi voluptates, modi itaque ducimus ipsum necessitatibus facilis architecto temporibus doloremque non, minus, dicta dolorum officiis labore., Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quidem repudiandae iure itaque, veritatis consectetur perspiciatis facere omnis illum vel sapiente error dignissimos unde illo expedita eaque quam eveniet ipsam.</p>
+            <p>
+              I'm a just person trying to make up for the time I spend not programming.
+              <br />
+              The commitment and motivation is total, I seek to dedicate myself fully to the IT sector :)
+              <br />
+              I consider myself an excellent colleague, empathetic and positive. 
+              Self-taught, results-oriented and effective communicator</p>
             <button>Contact me</button>
         </div>
         </div>

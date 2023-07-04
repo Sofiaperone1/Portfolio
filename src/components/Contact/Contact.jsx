@@ -6,13 +6,10 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 const Contact = () => {
   return (
      <div className='contact'>
-      <div className='sectionTitle'>
-        CONTACT
-      </div>
         <h1>
           Contact me
         </h1>
-        <p style={{textAlign:"center"}}>Do you want to know more about me? Don't hesitate and contact me!</p>
+        <p style={{textAlign:"center"}}>Do you want to know more about me? Don't hesitate to contact me!</p>
       
       <div className='cc'>
         <div className='ccLogos'>

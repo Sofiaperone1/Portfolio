@@ -6,7 +6,7 @@ import "./Home.css"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Footer from "../components/Footer/Footer"
-import Tools from '../components/Card/Tools'
+import Tools from '../components/Tools/Tools'
 
 const Home = () => {
 

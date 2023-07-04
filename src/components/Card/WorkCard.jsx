@@ -8,9 +8,8 @@ const WorkCard = ({name, description,img, category, link, skills}) => {
       <h5>{category}</h5>
       <h1>{name}</h1>
       <p>{description}</p>
-      <p>Deploy : <a href={link}> {link}</a></p>
-      <p>Skills: {skills}</p>
-
+      <p><b> Deploy :</b> <a href={link}> {link}</a></p>
+      <p><b>Skills :</b>{skills}</p>
 
     </div>
   )
