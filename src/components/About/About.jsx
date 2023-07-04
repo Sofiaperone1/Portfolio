@@ -1,6 +1,7 @@
 import React from 'react'
 import cv1 from "../../cv1.png"
 import "./About.css"
+import 'aos/dist/aos.css';
 
 
 

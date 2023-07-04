@@ -12,7 +12,6 @@ import redux from "../../Imgs/redux.png";
 import ts from "../../Imgs/ts.png";
 import vercel from "../../Imgs/vercel.png";
 import './Tools.css'
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Tools = () => {
