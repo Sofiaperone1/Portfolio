@@ -7,6 +7,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Footer from "../components/Footer/Footer"
 import Tools from '../components/Tools/Tools'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const Home = () => {
 

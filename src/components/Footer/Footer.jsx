@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
   return (
-    <div className='footer'>Sofia Perone - Portfolio   
+    <div className='footer'>
     <span>
     <GitHubIcon/>
     </span>

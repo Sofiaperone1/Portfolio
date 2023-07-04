@@ -1,12 +1,15 @@
 import React from 'react'
 import cv1 from "../../cv1.png"
 import "./About.css"
+import 'aos/dist/aos.css';
+
+
 
 const About = () => {
   return (
-    <div className='about'>
+    <div className='about' >
 
-        <div className='card'>
+        <div className='card' data-aos="fade-right" data-aos-duration="1000">
            <img src={cv1} alt="cv" />
 
            <div className='text'>
