@@ -2,8 +2,27 @@ import React, {useRef} from 'react'
 import "./Contact.css"
 import TextField from '@mui/material/TextField';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const ContactForm = () => {
+
+
+  const alert = () => {
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'bottom-end',
+      showConfirmButton: false,
+      timer: 900,
+      iconColor:"#66269b"
+  
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Message sent successfuly'
+    })
+  }
 
   const form = useRef();
 
@@ -27,17 +46,10 @@ const ContactForm = () => {
     
    <TextField className='name' id="outlined-basic" label="Name" variant="outlined" name="user_name"/>
    <TextField className="email"id="outlined-basic" label="Email" variant="outlined" name="user_email" />
-   <TextField
-    className="subject"
-          id="outlined-textarea"
-          label="Message"
-          placeholder="Placeholder"
-          multiline
-          name="message"
-        />
+   <TextField className="subject"id="outlined-basic" maxRows={4} multiline label="Message" variant="outlined" name="message" />
 
      <div class="btnHcontainer">
-    <button class="btn" type="submit" value="Send"> 
+    <button class="btn" type="submit" value="Send" onClick={alert}> 
    <svg width="277" height="62"> 
     <defs>
     <linearGradient id="grad1">

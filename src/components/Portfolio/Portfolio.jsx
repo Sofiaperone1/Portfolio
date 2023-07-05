@@ -7,7 +7,6 @@ import foodland from"../../Imgs/foodland.png"
 
 const Portfolio = () => {
 
-  
 
 const workCards = [
   {
@@ -23,7 +22,7 @@ const workCards = [
     category:"Full Stack",
     img:dogs,
     description:"Full stack application that allows users to search for dog races and view their information, they can also create their own races",
-    link:"pi-dogs-front-ruby.vercel.app",
+    link:"https://pi-dogs-front-ruby.vercel.app/",
     skills:"React, Node.js , Express, postgreSQL, Redux, Vercel"
   },
   {

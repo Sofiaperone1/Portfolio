@@ -9,7 +9,6 @@ import Footer from "../components/Footer/Footer"
 import Tools from '../components/Tools/Tools'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 AOS.init();
 
 const Home = () => {
@@ -58,8 +57,9 @@ const Home = () => {
   
         </div>
         <div className='navbarIcons'>
-        <GitHubIcon/>
-        <LinkedInIcon/>
+          <a href="https://github.com/Sofiaperone1"><GitHubIcon/></a>
+          <a href="https://www.linkedin.com/in/sofia-perone/"><LinkedInIcon/></a>
+      
         </div>
         </div>
 
@@ -77,7 +77,7 @@ const Home = () => {
           </h2> 
                                
       <div class="btnHcontainer">
-        <a class="btn" href='https://www.youtube.com/watch?v=h6CH3DG5trU&list=RDMM&index=10&ab_channel=CharlyGarcia-Topic'>
+        <a class="btn" href="#portfolio" onClick={(e) => handleClick(e, portfolioRef)}>
        <svg width="277" height="62"> 
         <defs>
         <linearGradient id="grad1">
@@ -94,7 +94,7 @@ const Home = () => {
         </div>
         </div>
         <div ref={aboutRef}>
-          <About />
+          <About contactRef={contactRef}/>
         </div>
         <div>
           <Tools/>
@@ -103,7 +103,7 @@ const Home = () => {
           <Portfolio />
         </div>
         <div ref={contactRef}>
-          <Contact />
+          <Contact/>
         </div>
         </div>
 
@@ -112,4 +112,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
