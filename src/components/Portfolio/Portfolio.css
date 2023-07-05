@@ -118,3 +118,39 @@ width: 100%;
     padding-left: 7px;
 
 }
+
+
+@media screen and (max-width: 767px) {
+
+    .portfolio {
+        background-image: url("../../violet2.jpg");
+    }
+    .filters {
+        width: 100%;
+    }
+    .cards{
+        align-items: center;
+        flex-direction: column;
+    }
+    .workCard {
+        width: 90%;
+        margin-bottom: 6%
+    }
+    .portText p {
+        text-align: center;
+    }
+    .portText h1 {
+        margin-bottom:3%
+    }
+    .workCard h5 {
+        font-size: 26px;
+    }
+    .workCard h1{
+        font-size: 31px;
+    }
+    .workCard p {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
