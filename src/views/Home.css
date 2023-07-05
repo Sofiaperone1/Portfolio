@@ -18,7 +18,7 @@
 .nav-container.active {
     width: 100%;
     height: 9vh;
-    background-color:rgba(255, 255, 255, 0.877);
+    background-color:rgba(255, 255, 255, 0.979);
     position: fixed;
     top: 0;
     z-index: 10;
@@ -40,9 +40,10 @@
     justify-content: space-evenly;
 }
 
-.navbar.active a, .nav-container.active h1,.nav-container.active .navbarIcons  {
+.navbar.active a, .nav-container.active h1,.nav-container.active .navbarIcons a {
 color:black;
 }
+
 
 .navbar a {
     text-decoration: none;
@@ -67,6 +68,10 @@ color:black;
     display: flex;
     justify-content: space-evenly;
     }
+
+.navbarIcons a {
+    color: white;
+}
 
 .navbarIcons svg {
     height: 6vh;
@@ -171,6 +176,7 @@ font-weight: 200;
         background: -webkit-linear-gradient(left,  #66269b 0%,#b16ce6 100%);
         background: linear-gradient(to right,  #66269b 0%,#b16ce6 100%);
         -webkit-background-clip: text;
+
         -webkit-text-fill-color: transparent;
        
       }
