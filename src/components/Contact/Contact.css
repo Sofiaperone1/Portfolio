@@ -184,6 +184,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .contact p{
+        width: 90%;
+    };
     .cc{
         display: flex;
         flex-direction: column;
