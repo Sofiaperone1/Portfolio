@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import cv1 from "../../cv1.png";
 import "./About.css";
 
