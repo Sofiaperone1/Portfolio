@@ -72,3 +72,34 @@
     height: 80vh;
 }
 
+@media screen and (max-width: 767px) {
+    
+    .card {
+        margin-top: 6%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .about img {
+        width: 47%;
+    }
+    .text {
+        margin-top: 3%;
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+    }
+    .about {
+        height: 88vh;
+        align-items: center;
+    }
+    .text p {
+        text-align: center;
+    }
+    .text button {
+        background-color: #7211b793;
+        width: 52%;
+    }
+}

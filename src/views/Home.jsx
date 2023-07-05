@@ -41,7 +41,7 @@ const Home = () => {
 
     
   return (
-    <div>
+    <div className='home'>
 
         {/* ------------ Navbar --------- */}
 
@@ -63,7 +63,7 @@ const Home = () => {
         </div>
         </div>
 
-        <div>
+        <div className='bannerCont'>
         <div className='banner'>
           <div className='bannerText'>
           <h1>Full Stack 
