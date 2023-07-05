@@ -180,18 +180,20 @@
 
   @media screen and (max-width: 767px) {
     .contact{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
     .contact p{
         width: 90%;
-    };
-    .cc{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
+   .cc{
+        
+        width: 100%;
+        display: unset;
+    }
+    
     .ccLogos{
         display: flex;
         width: 100%; 
