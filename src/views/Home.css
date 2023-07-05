@@ -229,6 +229,9 @@ font-weight: 200;
     .banner {
         background-image: url("../fondoEspacio5.jpg");
     }
+    .banner h1{
+        font-size: 66px
+    }
     .bannerText {
         margin-top: 19%;
     }
