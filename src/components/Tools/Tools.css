@@ -5,6 +5,8 @@
     background-color: black;
     padding-top: 1%;
     padding-bottom: 1%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+    border-top: 1px solid rgba(255, 255, 255, 0.233);
 }
 
 .tools img {
