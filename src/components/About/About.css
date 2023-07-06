@@ -94,6 +94,7 @@
     .about {
         height: 96vh;
         align-items: center;
+        padding-bottom: 9%;
     }
     .text p {
         text-align: center;
