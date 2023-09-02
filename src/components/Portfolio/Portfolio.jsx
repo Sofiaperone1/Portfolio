@@ -1,6 +1,4 @@
-import React, {useState}  from 'react'
-import ReactModal from 'react-modal';
-import ReactPlayer from 'react-player';
+import React from 'react'
 import "./Portfolio.css"
 import WorkCard from "../../components/Card/WorkCard"
 import gea from "../../Imgs/gea.png"
@@ -10,16 +8,6 @@ import smeet from"../../Imgs/smeet.png"
 
 
 const Portfolio = () => {
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
 const workCards = [
   {
