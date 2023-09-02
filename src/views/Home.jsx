@@ -9,6 +9,8 @@ import Footer from "../components/Footer/Footer"
 import Tools from '../components/Tools/Tools'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Carousel from '../components/Carousel/Carousel'
+
 AOS.init();
 
 const Home = () => {
@@ -73,7 +75,7 @@ const Home = () => {
           </h1>
           <h2>
           I have background mostly in front-end development but I also
-          have several Fullstack projects finished and deployed. I'am one of kind team player, and also, I love what I do : )
+          have several Fullstack projects finished and deployed. I'am one of kind team player, and also, I love what I do 
           </h2> 
                                
       <div class="btnHcontainer">
@@ -102,6 +104,13 @@ const Home = () => {
         <div ref={portfolioRef}>
           <Portfolio />
         </div>
+        <div>
+          <Carousel/>
+        </div>
+        <div>
+       
+        </div>
+      
         <div ref={contactRef}>
           <Contact/>
         </div>

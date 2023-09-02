@@ -3,7 +3,8 @@
     background-color: rgb(0, 0, 0);
     color: white;
     padding-top: 4%;
-   
+    border: 1px solid violet;
+    border-left-color: transparent;
 }
 .contact h1{
     font-size: 50px;
@@ -59,7 +60,7 @@
     color: rgba(255, 255, 255, 0.747);
 }
 
-.question p {
+.question p{
     font-family: 'News Cycle', sans-serif;
     margin-bottom: 1%;
     font-size: 18px;
@@ -68,6 +69,16 @@
 
 .question p span{
     color:#d44bfd
+}
+
+.collaborations {
+    font-size: 35px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    background-color: rgba(255, 255, 255, 0.274);
+    color: white;
+    width: 93%;
+    margin-top: 3%;
+    margin-bottom: 2%;
 }
 
 /* CONTACT FORM */

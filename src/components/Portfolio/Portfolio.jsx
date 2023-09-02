@@ -4,33 +4,49 @@ import WorkCard from "../../components/Card/WorkCard"
 import gea from "../../Imgs/gea.png"
 import dogs from "../../Imgs/dogs.png"
 import foodland from"../../Imgs/foodland.png"
+import smeet from"../../Imgs/smeet.png"
+
 
 const Portfolio = () => {
-
 
 const workCards = [
   {
     name:"Gea: Energy Store",
     category:"Frontend",
     img:gea,
+    colaboration:"Single developer",
     description:"Simple E-commerce for small shop, with independently managed firebase account ",
     link:"https://chic-toffee-93510a.netlify.app",
-    skills:"React, MaterialUI, Firebase , Netifly"
+    skills:"HTML, CSS, JS, React, MaterialUI, Firebase , Netifly"
   },
   {
     name:"API DOGS",
     category:"Full Stack",
     img:dogs,
+    colaboration:"Single developer",
     description:"Full stack application that allows users to search for dog races and view their information, they can also create their own races",
     link:"https://pi-dogs-front-ruby.vercel.app/",
-    skills:"React, Node.js , Express, postgreSQL, Redux, Vercel"
+    skills:"HTML, CSS, JS,React, Node.js , Express, postgreSQL, Redux, Vercel"
+  },
+  {
+    name:"Smeet Makwana - Design Portfolio",
+    category:"Frontend",
+    img:smeet,
+    colaboration:"Collaboration",
+    description:`Full responsive design. 
+    Transformation from fullstack project to frontend project. 
+    Creation and configuration of new db in Firebase.
+    `,
+    link:"https://www.smeetmakwana.com",
+    skills:"HTML, SASS, JS, React, Firebase, Digitalocean, Google search console"
   },
   {
     name:"FOODLAND",
     category:"Full Stack",
     img:foodland,
+    colaboration:"Collaboration",
     description:"This application is an ecommerce where users can register, add products reviews , pay with paypal, recibe Email notifications .Also it has an administration panel to create and modifie all products, delete users, watch statistics.. "
-    ,skills:"React, Node.js, Express, MongoDB, Redux"
+    ,skills:"HTML, CSS, JS, React, Node.js, Express, MongoDB, Redux"
   }
 ]
 
@@ -39,7 +55,7 @@ const workCards = [
 
           <div className='portText'>
                 <h1>My latest work</h1>
-                <p>These are the projects I made from scratch, Below, you can see images of other freelance jobs that will be deployed soon</p>
+                <p>These are the some of the projects I've worked with. Some I've made from scratch, in others </p>
           </div>
 
           <div className='filters'>
@@ -62,6 +78,7 @@ const workCards = [
         )
        })}
         </div>
+      
       </div>
   )
   

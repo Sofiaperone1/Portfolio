@@ -85,6 +85,10 @@ color:black;
 
 /* ------ BANNER ------ */
 
+.bannerCont {
+    background-color: black;
+}
+
 .banner {
     height: 97vh;
     background-image:url("../fondoEspacio1.jpg");
@@ -226,6 +230,7 @@ font-weight: 200;
 
     .bannerCont{
         width: 100%;
+        background-color: black;
     }
     .banner {
         background-image: url("../fondoEspacio5.jpg");
