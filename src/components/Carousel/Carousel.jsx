@@ -29,7 +29,7 @@ const Carousel = () => {
       <div className="carrousel">
       <div className='text'>
         <h1>Wordpress Experience</h1>
-        <p> Deployed websites maid from scratch, with integrated custom plugins and integrated custom styles for non-editable templates </p>        
+        <p> Deployed websites maid from scratch, with integrated custom plugins and integrated custom styles for non-editable templates.  </p>        
       </div>
         <Slider {...settings}>
           <div>
