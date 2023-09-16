@@ -15,7 +15,7 @@ const workCards = [
     category:"Frontend",
     img:gea,
     colaboration:"Single developer",
-    description:"Simple E-commerce for small shop, with independently managed firebase account ",
+    description:"MADE FROM SCRATCH - Simple E-commerce for small shop, with independently managed firebase account ",
     link:"https://chic-toffee-93510a.netlify.app",
     skills:"HTML, CSS, JS, React, MaterialUI, Firebase , Netifly"
   },
@@ -24,7 +24,7 @@ const workCards = [
     category:"Full Stack",
     img:dogs,
     colaboration:"Single developer",
-    description:"Full stack application that allows users to search for dog races and view their information, they can also create their own races",
+    description:"MADE FROM SCRATCH - Full stack application that allows users to search for dog races and view their information, they can also create their own races",
     link:"https://pi-dogs-front-ruby.vercel.app/",
     skills:"HTML, CSS, JS,React, Node.js , Express, postgreSQL, Redux, Vercel"
   },
@@ -45,7 +45,7 @@ const workCards = [
     category:"Full Stack",
     img:foodland,
     colaboration:"Collaboration",
-    description:"This application is an ecommerce where users can register, add products reviews , pay with paypal, recibe Email notifications .Also it has an administration panel to create and modifie all products, delete users, watch statistics.. "
+    description:"MADE FROM SCRATCH - This application is an ecommerce where users can register, add products reviews , pay with paypal, recibe Email notifications .Also it has an administration panel to create and modifie all products, delete users, watch statistics.. "
     ,skills:"HTML, CSS, JS, React, Node.js, Express, MongoDB, Redux"
   }
 ]
@@ -55,7 +55,7 @@ const workCards = [
 
           <div className='portText'>
                 <h1>My latest work</h1>
-                <p>These are the some of the projects I've worked with. Some I've made from scratch, in others </p>
+                <p>These are the some of the projects I've worked with or made from scratch </p>
           </div>
 
           <div className='filters'>
