@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "../Portfolio/Portfolio.css"
 
-const WorkCard = ({name, description,img,img2, img3, img4, category, link, skills}) => {
+const WorkCard = ({name, description,img, category, link, skills}) => {
 
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   
 
