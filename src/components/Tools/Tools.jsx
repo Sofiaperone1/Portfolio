@@ -3,7 +3,7 @@ import React from 'react'
 import css from "../../Imgs/css.png";
 import git from "../../Imgs/git.png";
 import js from "../../Imgs/js.png";
-import mysql from "../../Imgs/mysql.png";
+//import mysql from "../../Imgs/mysql.png";
 import netifly from "../../Imgs/netifly.png";
 import node from "../../Imgs/node.png";
 import postgre from "../../Imgs/postgre.png";
@@ -14,6 +14,7 @@ import vercel from "../../Imgs/vercel.png";
 import './Tools.css'
 import 'aos/dist/aos.css';
 
+// <img data-aos="flip-left" data-aos-duration="1000" src={mysql} alt="mysql" />
 const Tools = () => {
   return (
     <div className='tools'>
@@ -26,7 +27,7 @@ const Tools = () => {
       <img data-aos="flip-left" data-aos-duration="1000" src={vercel} alt={vercel} />
       <img data-aos="flip-left" data-aos-duration="1000" src={ts} alt="ts" />
       <img data-aos="flip-left" data-aos-duration="1000" src={netifly} alt="netifly" />
-      <img data-aos="flip-left" data-aos-duration="1000" src={mysql} alt="mysql" />
+      
       <img data-aos="flip-left" data-aos-duration="1000" src={postgre} alt="postgre" />
     </div>
   )
