@@ -74,8 +74,7 @@ const Home = () => {
           Developer
           </h1>
           <h2>
-          I have background mostly in front-end development but I also
-          have several Fullstack projects finished and deployed. I'am one of kind team player, and also, I love what I do 
+     Hi! My name is Sofia. Because of my work as a freelancer, most of my background is with made from scratch fullstack projects. I'am one of kind team player, and also, I love what I do.
           </h2> 
                                
       <div class="btnHcontainer">
