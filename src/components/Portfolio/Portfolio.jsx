@@ -19,11 +19,12 @@ import lm2 from "../../Imgs/lm2.png"
 import lm3 from "../../Imgs/lm3.png"
 import lm4 from "../../Imgs/lm4.png"
 
+
 const Portfolio = () => {
 
 const workCards = [
   {
-    name:"Lideres Universales - Mandala economico",
+    name:"Lideres Universales",
     category:"Full Stack",
     img:lm,
     img2:lm2,
@@ -103,6 +104,7 @@ const workCards = [
         <div className='cards'>
        {workCards.map((e) => {
         return ( 
+          
           <WorkCard
           name={e.name}
           category={e.category}
@@ -114,6 +116,7 @@ const workCards = [
           link={e.link}
           skills={e.skills}
           />
+        
         )
        })}
         </div>
