@@ -18,7 +18,7 @@ const ModalGaleria = ({img2, img3, img4, img}) => {
 
   return (
     <div>
-      <a className="verMas" href="#" style={{backgroundColor:"orange"}} onClick={abrirModal}>See more pictures</a>
+      <button className="verMas"  style={{backgroundColor:"#c86420"}} onClick={abrirModal}>See more pictures</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={cerrarModal}

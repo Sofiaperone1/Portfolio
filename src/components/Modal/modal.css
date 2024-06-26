@@ -3,8 +3,15 @@
     flex-direction: column;
 }
 
+.verMas:hover{
+    background-color: rgb(180, 72, 0) !important;
+    cursor: pointer;
+}
+
 .verMas {
-    
+        background-color: rgb(200, 100, 32);
+        width: 100%;
+        border: none;
         background-color: orange;
         display: flex;
         padding: 1%;

@@ -18,22 +18,25 @@ import lm from "../../Imgs/lm.png"
 import lm2 from "../../Imgs/lm2.png"
 import lm3 from "../../Imgs/lm3.png"
 import lm4 from "../../Imgs/lm4.png"
-
+import mp1 from "../../Imgs/mp1.png"
+import mp2 from "../../Imgs/mp2.png"
+import mp3 from "../../Imgs/mp3.png"
+import mp4 from "../../Imgs/mp4.png"
 
 const Portfolio = () => {
 
 const workCards = [
   {
-    name:"Lideres Universales",
+    name:"MaguPrints",
     category:"Full Stack",
-    img:lm,
-    img2:lm2,
-    img3:lm3,
-    img4:lm4,
+    img:mp1,
+    img2:mp2,
+    img3:mp3,
+    img4:mp4,
     colaboration:"Single developer",
-    description:"MADE FROM SCRATCH - It is an application created for participants to invest money within a mandala structure, and then recover a greater percentage.",
-    link:"https://lideres-univ-front.vercel.app/",
-    skills:"HTML, CSS, JS, React, Next, Node, Express, MongoDB, Vercel"
+    description:"MADE FROM SCRATCH - E-commerce / Print Business",
+    link:"https://fluffy-youtiao-73fc8b.netlify.app/",
+    skills:"HTML, CSS, JS, React, Node, Express, MongoDB, Vercel"
   },
   {
     name:"Gea: Energy Store",
@@ -46,6 +49,18 @@ const workCards = [
     description:"MADE FROM SCRATCH - Simple E-commerce for small shop, with independently managed firebase account ",
     link:"https://chic-toffee-93510a.netlify.app",
     skills:"HTML, CSS, JS, React, MaterialUI, Firebase , Netifly"
+  },
+  {
+    name:"Lideres Universales",
+    category:"Full Stack",
+    img:lm,
+    img2:lm2,
+    img3:lm3,
+    img4:lm4,
+    colaboration:"Single developer",
+    description:"MADE FROM SCRATCH - It is an application created for participants to invest money within a mandala structure, and then recover a greater percentage.",
+    link:"https://lideresuniversales.com",
+    skills:"HTML, CSS, JS, React, Next, Node, Express, MongoDB, Vercel"
   },
   {
     name:"API DOGS",
@@ -92,7 +107,7 @@ const workCards = [
 
           <div className='portText'>
                 <h1>My latest work</h1>
-                <p>These are the some of the projects I've worked with or made from scratch </p>
+                <p>These are some of the projects I've worked with or made from scratch. For reasons of accuracy and confidentiality, some links redirect to applications in beta mode </p>
           </div>
 
           <div className='filters'>
