@@ -22,10 +22,26 @@ import mp1 from "../../Imgs/mp1.png"
 import mp2 from "../../Imgs/mp2.png"
 import mp3 from "../../Imgs/mp3.png"
 import mp4 from "../../Imgs/mp4.png"
+import h1 from "../../Imgs/h1.png"
+import h2 from "../../Imgs/h2.png"
+import h3 from "../../Imgs/h3.png"
+import h4 from "../../Imgs/h4.png"
 
 const Portfolio = () => {
 
 const workCards = [
+  {
+    name:"Heat&Cool-Budget",
+    category:"Full Stack",
+    img:h1,
+    img2:h2,
+    img3:h3, 
+    img4:h4,
+    colaboration:"Single developer",
+    description:"MADE FROM SCRATCH - E-commerce / Print Business",
+    link:"https://heatandcool-c36g.vercel.app/",
+    skills:"HTML, CSS, JS, React, Node, Express, MongoDB, Vercel"
+  },
   {
     name:"MaguPrints",
     category:"Full Stack",
@@ -33,7 +49,7 @@ const workCards = [
     img2:mp2,
     img3:mp3,
     img4:mp4,
-    colaboration:"Single developer",
+    colaboration:"With designer",
     description:"MADE FROM SCRATCH - E-commerce / Print Business",
     link:"https://fluffy-youtiao-73fc8b.netlify.app/",
     skills:"HTML, CSS, JS, React, Node, Express, MongoDB, Vercel"
@@ -63,25 +79,13 @@ const workCards = [
     skills:"HTML, CSS, JS, React, Next, Node, Express, MongoDB, Vercel"
   },
   {
-    name:"API DOGS",
-    category:"Full Stack",
-    img:dogs,
-    img2:dogs2,
-    img3:dogs3,
-    img4:dogs4,
-    colaboration:"Single developer",
-    description:"MADE FROM SCRATCH - Full stack application that allows users to search for dog races and view their information, they can also create their own races",
-    link:"https://pi-dogs-front-ruby.vercel.app/",
-    skills:"HTML, CSS, JS,React, Node.js , Express, postgreSQL, Redux, Vercel"
-  },
-  {
     name:"Smeet Makwana - Design Portfolio",
     category:"Frontend",
     img:smeet,
     img2:smeet2,
     img3:smeet3,
     img4:smeet4,
-    colaboration:"Collaboration",
+    colaboration:"With designer",
     description:`Full responsive design. 
     Transformation from fullstack project to frontend project. 
     Creation and configuration of new db in Firebase.
@@ -96,7 +100,7 @@ const workCards = [
     img2:foodland,
     img3:foodland,
     img4:foodland,
-    colaboration:"Collaboration",
+    colaboration:"With fullstack dev team",
     description:"MADE FROM SCRATCH - This application is an ecommerce where users can register, add products reviews , pay with paypal, recibe Email notifications .Also it has an administration panel to create and modifie all products, delete users, watch statistics.. "
     ,skills:"HTML, CSS, JS, React, Node, Express, MongoDB, Redux"
   }
