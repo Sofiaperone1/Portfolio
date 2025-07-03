@@ -1,15 +1,15 @@
 import React,{ useRef, useState } from 'react'
-import About from "../components/About/About"
-import Contact from "../components/Contact/Contact"
-import Portfolio from "../components/Portfolio/Portfolio"
+import About from "../../components/About/About"
+import Contact from "../../components/Contact/Contact"
+import Portfolio from "../../components/Portfolio/Portfolio"
 import "./Home.css"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Footer from "../components/Footer/Footer"
-import Tools from '../components/Tools/Tools'
+import Footer from "../../components/Footer/Footer"
+import Tools from '../../components/Tools/Tools'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Carousel from '../components/Carousel/Carousel'
+import Carousel from '../../components/Carousel/Carousel'
 
 AOS.init();
 

@@ -4,15 +4,15 @@
 }
 
 .verMas:hover{
-    background-color: rgb(180, 72, 0) !important;
+    border: 1px solid orange !important;
     cursor: pointer;
+    color: orange !important;
 }
 
 .verMas {
-        background-color: rgb(200, 100, 32);
+        background-color: rgb(200 100 32 / 0%);
+        border: 1px solid #ffffff8a;
         width: 100%;
-        border: none;
-        background-color: orange;
         display: flex;
         padding: 1%;
         margin: 2%;
