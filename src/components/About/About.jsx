@@ -1,38 +1,50 @@
-import React from 'react';
-import cv1 from "../../cv1.png";
-import "./About.css";
+import './About.css';
+import { useEffect, useRef } from 'react';
+import photo from '../../cv1.png'; // ← cambiá a violet2.jpg si preferís esa foto
 
-const About = ({contactRef}) => {
+function About() {
+  const ref = useRef(null);
 
-
-  const scrollToContact = () => {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: contactRef.current.offsetTop,
-    });
-  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      },
+      { threshold: 0.15 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className='about'>
-      <div className='card'>
-        <img src={cv1} alt="cv" />
+    <section id="about" className="about" ref={ref}>
+      <div className="about-photo-wrap">
+        <img src={photo} alt="Sofia Perone" className="about-photo" />
+        <div className="about-photo-accent" />
+        <div className="about-photo-accent-2" />
+      </div>
 
-        <div className='text'>
-          <h1>Sofia Perone</h1> 
-          <h3>Fullstack developer</h3>
-          <p>
-            I'm a just person trying to make up for the time I spend not programming.
-            <br />
-            The commitment and motivation is total, I seek to dedicate myself fully to the IT sector :)
-            <br />
-            I consider myself an excellent colleague, empathetic and positive. 
-            Self-taught, results-oriented and effective communicator
-          </p>
-          <button onClick={scrollToContact}>Contact me</button>
+      <div className="about-content">
+        <div className="section-label">About me</div>
+        <h2 className="about-name">Sofia Perone</h2>
+        <div className="about-role">Fullstack Developer</div>
+        <p className="about-text">
+          I'm a developer who genuinely loves what I do. With a freelance background,
+          most of my experience comes from building complete products from the ground up.
+        </p>
+        <p className="about-text">
+          Self-taught, results-oriented and an effective communicator — I seek to
+          dedicate myself fully to the IT world with total commitment and motivation.
+        </p>
+        <p className="about-text">📍 Buenos Aires, Argentina — serving clients worldwide.</p>
+        <div className="about-tags">
+          {['Self-taught', 'Team player', 'Freelance', 'Empathetic', 'Results-oriented'].map(t => (
+            <span key={t} className="tag">{t}</span>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default About;

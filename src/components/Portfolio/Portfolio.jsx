@@ -1,144 +1,181 @@
-import React from 'react'
-import "./Portfolio.css"
-import WorkCard from "../../components/Card/WorkCard"
-import gea from "../../Imgs/gea.png"
-import gea2 from "../../Imgs/gea2.png"
-import gea3 from "../../Imgs/gea3.png"
-import gea4 from "../../Imgs/gea4.png"
-import foodland from "../../Imgs/foodland.png"
-import smeet from "../../Imgs/smeet.png"
-import smeet2 from "../../Imgs/smeet2.png"
-import smeet3 from "../../Imgs/smeet3.png"
-import smeet4 from "../../Imgs/smeet4.png"
-import lm from "../../Imgs/lm.png"
-import lm2 from "../../Imgs/lm2.png"
-import lm3 from "../../Imgs/lm3.png"
-import lm4 from "../../Imgs/lm4.png"
-import mp1 from "../../Imgs/mp1.png"
-import mp2 from "../../Imgs/mp2.png"
-import mp3 from "../../Imgs/mp3.png"
-import mp4 from "../../Imgs/mp4.png"
-import h1 from "../../Imgs/h1.png"
-import h2 from "../../Imgs/h2.png"
-import h3 from "../../Imgs/h3.png"
-import h4 from "../../Imgs/h4.png"
+import { useState, useEffect, useRef } from 'react';
+import './Portfolio.css';
 
-const Portfolio = () => {
+// Importá las imágenes de tus proyectos desde src/Imgs/
+import imgLM from '../../Imgs/lm.png';
+import imgMagu from '../../Imgs/mp1.png';
+import imgSmeet from '../../Imgs/smeet.png';
+import imgFoodland from '../../Imgs/foodland.png';
+import imgGea from '../../Imgs/gea.png';
+import imgHeat from '../../Imgs/h1.png';
 
-const workCards = [
+const projects = [
   {
-    name:"Heat&Cool-Budget",
-    category:"Full Stack",
-    img:h1,
-    img2:h2,
-    img3:h3, 
-    img4:h4,
-    colaboration:"Single developer",
-    description:"MADE FROM SCRATCH - E-commerce / Print Business",
-    link:"https://heatandcool-c36g.vercel.app/",
-    skills:"HTML, CSS, JS, React, Node, Express, MongoDB, Vercel"
+    id: 1,
+    name: 'Lideres Universales',
+    type: 'Full Stack',
+    desc: 'Investment platform within a mandala structure. Built from scratch with full auth and money management flows.',
+    tech: ['React', 'Next.js', 'Node', 'MongoDB', 'Express', 'Vercel'],
+    img: imgLM,
+    url: 'https://lideresuniversales.com',
+    featured: true,
   },
   {
-    name:"MaguPrints",
-    category:"Full Stack",
-    img:mp1,
-    img2:mp2,
-    img3:mp3,
-    img4:mp4,
-    colaboration:"With designer",
-    description:"MADE FROM SCRATCH - E-commerce / Print Business",
-    link:"https://fluffy-youtiao-73fc8b.netlify.app/",
-    skills:"HTML, CSS, JS, React, Node, Express, MongoDB, Vercel"
+    id: 2,
+    name: 'MaguPrints',
+    type: 'Full Stack',
+    desc: 'E-commerce & print business built from scratch.',
+    tech: ['React', 'Node', 'MongoDB', 'Express'],
+    img: imgMagu,
+    url: 'https://fluffy-youtiao-73fc8b.netlify.app/',
+    featured: false,
   },
   {
-    name:"Gea: Energy Store",
-    category:"Frontend",
-    img:gea,
-    img2:gea2,
-    img3:gea3,
-    img4:gea4,
-    colaboration:"Single developer",
-    description:"MADE FROM SCRATCH - Simple E-commerce for small shop, with independently managed firebase account ",
-    link:"https://chic-toffee-93510a.netlify.app",
-    skills:"HTML, CSS, JS, React, MaterialUI, Firebase , Netifly"
+    id: 3,
+    name: 'Smeet Makwana Portfolio',
+    type: 'Frontend',
+    desc: 'Full transformation from fullstack to frontend. New Firebase DB configuration.',
+    tech: ['React', 'SASS', 'Firebase', 'Digitalocean'],
+    img: imgSmeet,
+    url: 'https://www.smeetmakwana.com',
+    featured: false,
   },
   {
-    name:"Lideres Universales",
-    category:"Full Stack",
-    img:lm,
-    img2:lm2,
-    img3:lm3,
-    img4:lm4,
-    colaboration:"Single developer",
-    description:"MADE FROM SCRATCH - It is an application created for participants to invest money within a mandala structure, and then recover a greater percentage.",
-    link:"https://lideresuniversales.com",
-    skills:"HTML, CSS, JS, React, Next, Node, Express, MongoDB, Vercel"
+    id: 4,
+    name: 'FOODLAND',
+    type: 'Full Stack',
+    desc: 'E-commerce with PayPal, admin panel, product reviews and email notifications.',
+    tech: ['React', 'Node', 'MongoDB', 'PayPal'],
+    img: imgFoodland,
+    url: null,
+    featured: false,
   },
   {
-    name:"Smeet Makwana - Design Portfolio",
-    category:"Frontend",
-    img:smeet,
-    img2:smeet2,
-    img3:smeet3,
-    img4:smeet4,
-    colaboration:"With designer",
-    description:`Full responsive design. 
-    Transformation from fullstack project to frontend project. 
-    Creation and configuration of new db in Firebase.
-    `,
-    link:"https://www.smeetmakwana.com",
-    skills:"HTML, SASS, JS, React, Firebase, Digitalocean, Google search console"
+    id: 5,
+    name: 'Gea: Energy Store',
+    type: 'Frontend',
+    desc: 'Small e-commerce with independently managed Firebase account.',
+    tech: ['React', 'MaterialUI', 'Firebase', 'Netlify'],
+    img: imgGea,
+    url: 'https://chic-toffee-93510a.netlify.app',
+    featured: false,
   },
   {
-    name:"FOODLAND",
-    category:"Full Stack",
-    img:foodland,
-    img2:foodland,
-    img3:foodland,
-    img4:foodland,
-    colaboration:"With fullstack dev team",
-    description:"MADE FROM SCRATCH - This application is an ecommerce where users can register, add products reviews , pay with paypal, recibe Email notifications .Also it has an administration panel to create and modifie all products, delete users, watch statistics.. "
-    ,skills:"HTML, CSS, JS, React, Node, Express, MongoDB, Redux"
-  }
-]
+    id: 6,
+    name: 'Heat&Cool Budget',
+    type: 'Full Stack',
+    desc: 'E-commerce and print business platform built from scratch.',
+    tech: ['React', 'Node', 'MongoDB', 'Vercel'],
+    img: imgHeat,
+    url: 'https://heatandcool-c36g.vercel.app/',
+    featured: false,
+  },
+];
 
+const FILTERS = ['All', 'Full Stack', 'Frontend', 'Backend'];
+
+function ArrowIcon() {
   return (
-      <div className='portfolio'>
-
-          <div className='portText'>
-                <h1>My latest work</h1>
-                <p>These are some of the projects I've worked with or made from scratch. For reasons of accuracy and confidentiality, some links redirect to applications in beta mode </p>
-          </div>
-
-          <div className='filters'>
-            <button>Full Stack</button>
-            <button>Frontend</button>
-            <button>Backend</button>
-          </div>
-
-        <div className='cards'>
-       {workCards.map((e) => {
-        return ( 
-          
-          <WorkCard
-          name={e.name}
-          category={e.category}
-          img={e.img}
-          img2={e.img2}
-          img3={e.img3}
-          img4={e.img4}
-          description={e.description}
-          link={e.link}
-          skills={e.skills}
-          />
-        
-        )
-       })}
-        </div>
-      
-      </div>
-  )
-  
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <path d="M1 1h10v10M1 11L11 1" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
 }
 
-export default Portfolio
+function Portfolio() {
+  const [activeFilter, setActiveFilter] = useState('All');
+  const ref = useRef(null);
+
+  const filtered = activeFilter === 'All'
+    ? projects
+    : projects.filter(p => p.type === activeFilter);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      },
+      { threshold: 0.05 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section id="portfolio" className="portfolio" ref={ref}>
+      <div className="section-header">
+        <h2 className="section-title">
+          My<br /><em>Work</em>
+        </h2>
+        <div className="filter-tabs">
+          {FILTERS.map(f => (
+            <button
+              key={f}
+              className={`filter-btn${activeFilter === f ? ' active' : ''}`}
+              onClick={() => setActiveFilter(f)}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="projects-grid">
+        {filtered.map((project) => (
+          <div
+            key={project.id}
+            className={`project-card${project.featured ? ' featured' : ''}`}
+          >
+            <img
+              src={project.img}
+              alt={project.name}
+              className="project-img"
+            />
+            <div className="project-overlay">
+              <div className="project-type">{project.type}</div>
+              <div className="project-name">{project.name}</div>
+              <div className="project-desc">{project.desc}</div>
+              <div className="project-tech">
+                {project.tech.map(t => (
+                  <span key={t} className="tech-pill">{t}</span>
+                ))}
+              </div>
+            </div>
+            {project.url && (
+              <a
+                href={project.url}
+                className="project-link-btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ArrowIcon />
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* WordPress section */}
+      <div className="wp-section">
+        <div className="section-label" style={{ marginTop: '100px' }}>Also</div>
+        <h3 className="wp-title">WordPress Experience</h3>
+        <p className="wp-desc">
+          Deployed websites built from scratch with custom plugins and integrated
+          custom styles for non-editable templates.
+        </p>
+        <div className="wp-grid">
+          <div className="wp-card">
+            <div className="wp-placeholder" />
+            <div className="wp-card-label">Ropita Estilosa 2.0</div>
+          </div>
+          <div className="wp-card">
+            <div className="wp-placeholder wp-placeholder-2" />
+            <div className="wp-card-label">Custom WP Store</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Portfolio;

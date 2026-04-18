@@ -1,19 +1,12 @@
-import React from 'react'
-import "./Footer.css"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import './Footer.css';
 
-const Footer = () => {
+function Footer() {
   return (
-    <div className='footer'>
-    <span>
-    <GitHubIcon/>
-    </span>
-    <span>
-    <LinkedInIcon/>
-    </span>
-    </div>
-  )
+    <footer className="footer">
+      <span className="footer-logo">Sofia Perone</span>
+      <span className="footer-copy">© 2026 — Buenos Aires, Argentina</span>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

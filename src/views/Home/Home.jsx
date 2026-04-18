@@ -1,123 +1,35 @@
-import React,{ useRef, useState } from 'react'
-import About from "../../components/About/About"
-import Contact from "../../components/Contact/Contact"
-import Portfolio from "../../components/Portfolio/Portfolio"
-import "./Home.css"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Footer from "../../components/Footer/Footer"
-import Tools from '../../components/Tools/Tools'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Carousel from '../../components/Carousel/Carousel'
+import './Home.css';
 
-AOS.init();
-
-const Home = () => {
-
-    // ------- SPA
-    //const inicioRef = useRef(null);
-    const aboutRef = useRef(null);
-    const portfolioRef = useRef(null);
-    const contactRef = useRef(null);
-
-    const handleClick = (event, ref) => {
-        event.preventDefault();
-        window.scrollTo({
-          behavior: 'smooth',
-          top: ref.current.offsetTop,
-        });
-      };
-
-
-    // ------- NAVBAR 
-    const [navbar, setNavbar] = useState (false);
-
-    const changeBackground = () => {
-      if (window.scrollY >= 80 ) 
-         {setNavbar(true)}
-    
-      else {setNavbar(false)}
-    }
-    window.addEventListener ('scroll', changeBackground);
-
-    
+function Home() {
   return (
-    <div className='home'>
+    <section id="hero" className="hero">
+      <div className="hero-bg-line" />
+      <div className="hero-bg-line-2" />
 
-        {/* ------------ Navbar --------- */}
+      <div className="hero-label fade-up">Full Stack Developer — Buenos Aires</div>
 
-         <div className={navbar ? 'nav-container active' : 'nav-container'}> 
+      <h1 className="hero-title fade-up delay-1">
+        Building things<br />
+        <span>that work.</span>
+      </h1>
 
-         <h1 className='name'>SOFIA PERONE</h1>
+      <div className="hero-bottom fade-up delay-2">
+        <p className="hero-desc">
+          Freelance developer based in Buenos Aires. I build full stack products
+          from scratch — with focus on clean code, real results, and experiences
+          people actually want to use.
+        </p>
+        <a href="#portfolio" className="hero-cta">
+          View my work
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1h12v12M1 13L13 1" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </a>
+      </div>
 
-         <div className= {navbar ? 'navbar active' : 'navbar'} >
-
-            <a href="#about"onClick={(e) => handleClick(e, aboutRef)}>ABOUT</a>
-            <a href="#contact"onClick={(e) => handleClick(e, contactRef)}>CONTACT</a>
-            <a href="#portfolio"onClick={(e) => handleClick(e, portfolioRef)}>PORTFOLIO</a>
-  
-        </div>
-        <div className='navbarIcons'>
-          <a href="https://github.com/Sofiaperone1"><GitHubIcon/></a>
-          <a href="https://www.linkedin.com/in/sofia-perone/"><LinkedInIcon/></a>
-      
-        </div>
-        </div>
-
-        <div className='bannerCont'>
-        <div className='banner'>
-          <div className='bannerText'>
-          <h1>Full Stack 
-          </h1>
-          <h1>
-          Developer
-          </h1>
-          <h2>
-     Hi! My name is Sofia. Because of my work as a freelancer, most of my background is with made from scratch fullstack projects. I'am one of kind team player, and also, I love what I do!
-          </h2> 
-                               
-      <div class="btnHcontainer">
-        <a class="btn" href="#portfolio" onClick={(e) => handleClick(e, portfolioRef)}>
-       <svg width="277" height="62"> 
-        <defs>
-        <linearGradient id="grad1">
-            <stop offset="0%" stop-color="#b16ce6"/>
-            <stop offset="100%" stop-color="#66269b" />
-        </linearGradient>
-       </defs>
-     <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
-         </svg>
-      <span>Take a look</span>
-    </a>
-    </div>
-
-        </div>
-        </div>
-        <div ref={aboutRef}>
-          <About contactRef={contactRef}/>
-        </div>
-        <div>
-          <Tools/>
-        </div>
-        <div ref={portfolioRef}>
-          <Portfolio />
-        </div>
-        <div>
-          <Carousel/>
-        </div>
-        <div>
-       
-        </div>
-      
-        <div ref={contactRef}>
-          <Contact/>
-        </div>
-        </div>
-
-        <Footer/>
-    </div>
-  )
+      <div className="hero-scroll">Scroll</div>
+    </section>
+  );
 }
 
 export default Home;

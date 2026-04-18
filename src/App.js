@@ -1,21 +1,23 @@
-import React from 'react';
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-
+import './index.css';
+import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home/Home';
-import ResumeVideo from './views/ResumeVideo/ResumeVideo'; 
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import Portfolio from './components/Portfolio/Portfolio';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
-
-
   return (
-    <div className="App">
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/resume" element={<ResumeVideo />} />
-    </Routes>
-    </div>
-    
+    <>
+      <Navbar />
+      <Home />
+      <Skills />
+      <About />
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 

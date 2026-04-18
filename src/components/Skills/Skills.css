@@ -1,0 +1,37 @@
+.skills-marquee {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    overflow: hidden;
+    background: var(--bg-2);
+  }
+  
+  .marquee-track {
+    display: flex;
+    gap: 60px;
+    animation: marquee 22s linear infinite;
+    width: max-content;
+  }
+  
+  .marquee-item {
+    font-family: 'Barlow Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .marquee-item::after {
+    content: '·';
+    color: var(--accent);
+    font-size: 20px;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }

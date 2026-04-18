@@ -1,25 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap'); /* h1 banner */
-
 .footer {
-    height: 18vh;
-    background:linear-gradient(to top,  rgba(29, 29, 29, 0.979) 0%, rgb(0, 0, 0) 100%);
+    padding: 40px 60px;
+    border-top: 1px solid var(--border);
     display: flex;
-    justify-content:center;
-    align-items: flex-end;
-    color: rgba(255, 255, 255, 0.795);
-    font-family: 'Passion One', cursive;
-    font-size: 22px;
-}
-
-.footer span {
-    margin-left: 0.5%;
-    margin-bottom:1%;
-}
-
-@media screen and (max-width: 767px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  .footer-copy {
+    font-family: 'Barlow Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  
+  @media (max-width: 768px) {
     .footer {
-        width: 100%;
-        height: 7vh;
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
     }
-    
-}
+  }

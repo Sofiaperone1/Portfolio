@@ -1,106 +1,115 @@
-.about img {
-    width: 24%;
-}
-
 .about {
-    display:flex;
-    flex-direction: column;
-}
-
-.text{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    color: rgba(255, 255, 255, 0.671);
-    margin-left:2%;
-    height: 100%;
-    
-}
-
-.text h1{
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 1%;
-}
-.text h3{
-    font-weight: 100;
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 29px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    color:#b16ce6
-} 
-.text button{
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 22px;
-    padding: 1%;
-    width: 26%;
-    background-color: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.89);
-    background-color: #38313d93;
-    border-radius: 0px;
-    margin-top: 1%;
-    
-}
-.text button:hover {
-    background-color: #aa57ee93
-}
-.text p {
-    text-align: start;
-    width: 80%;
-    font-family: 'News Cycle', sans-serif;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.774);
-}
-
-
-.card {
-    display: flex;
-    width: 85%;
+    padding: 140px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: center;
-    margin-top: 6%;
-    margin-left: 7%;
-   
-}
-
-.about{
-    background-color:rgb(18 18 18);
-    height: 80vh;
-}
-
-@media screen and (max-width: 767px) {
-    
-    .card {
-        margin-top: 6%;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .about img {
-        width: 47%;
-    }
-    .text {
-        margin-top: 3%;
-        align-items: center;
-        margin-left: 0;
-        width: 100%;
-    }
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .about.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .about-photo-wrap {
+    position: relative;
+    max-width: 380px;
+  }
+  
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    filter: grayscale(15%);
+    display: block;
+  }
+  
+  .about-photo-accent {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 60%;
+    height: 60%;
+    border-top: 1px solid var(--accent);
+    border-left: 1px solid var(--accent);
+    pointer-events: none;
+  }
+  
+  .about-photo-accent-2 {
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+    width: 60%;
+    height: 60%;
+    border-bottom: 1px solid var(--accent);
+    border-right: 1px solid var(--accent);
+    pointer-events: none;
+  }
+  
+  .about-content {
+    padding-left: 40px;
+  }
+  
+  .about-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  
+  .about-role {
+    font-family: 'Barlow Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 36px;
+  }
+  
+  .about-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #888;
+    margin-bottom: 16px;
+  }
+  
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 36px;
+  }
+  
+  .tag {
+    font-family: 'Barlow Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    transition: all 0.2s;
+  }
+  
+  .tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  
+  @media (max-width: 900px) {
     .about {
-        height: 96vh;
-        align-items: center;
-        padding-bottom: 9%;
+      grid-template-columns: 1fr;
+      padding: 80px 24px;
     }
-    .text p {
-        text-align: center;
+    .about-content {
+      padding-left: 0;
     }
-    .text button {
-        background-color: #7211b793;
-        width: 52%;
+    .about-photo-wrap {
+      max-width: 280px;
     }
-}
+  }
