@@ -1,6 +1,6 @@
 import './About.css';
 import { useEffect, useRef } from 'react';
-import photo from '../../cv1.png'; // ← cambiá a violet2.jpg si preferís esa foto
+import photo from '../../cv2.jpeg'; // ← cambiá a violet2.jpg si preferís esa foto
 
 function About() {
   const ref = useRef(null);

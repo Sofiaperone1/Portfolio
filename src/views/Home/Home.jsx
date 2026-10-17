@@ -9,8 +9,8 @@ function Home() {
       <div className="hero-label fade-up">Full Stack Developer — Buenos Aires</div>
 
       <h1 className="hero-title fade-up delay-1">
-        Building things<br />
-        <span>that work.</span>
+        Simple outside<br />
+        <span>solid inside.</span>
       </h1>
 
       <div className="hero-bottom fade-up delay-2">
